@@ -1,6 +1,6 @@
 # DMS - Athena/Redshift - QuickSight Workshop
 
-Migrate EC2 based postgresql to athena and visualize it thru QuickSight
+Migrate EC2 based postgresql to athena and visualize it thru QuickSight. Use for initial load only, not configured for CDC.
 
 ### Create VPC, IAM Role and Security Group
 
@@ -92,7 +92,7 @@ sudo systemctl restart postgresql
 
 Create endpoint for source and target (for Athena as target use "addColumnName" = true)
 
-Create replication task
+Create replication task with initial load only and only for "public" schema
 
 ### Create Glue Crawler
 
