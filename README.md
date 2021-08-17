@@ -113,4 +113,10 @@ group by actor.first_name, actor.last_name
 ```
 
 ### Configure QuickSight
-Login to QuickSight and add Athena as data source
+Sign up to QuickSight 
+
+Gave S3 access 
+
+Enable QuickSight access to Athena and S3
+
+Add Athena as data source
