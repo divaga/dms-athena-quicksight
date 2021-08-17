@@ -64,6 +64,7 @@ Create dms replication instance - note down internal ip addresss
 
 ### Allow access for DMS
 
+Edit this file:
 ```
 sudo su - postgres 
 vi /var/lib/pgsql/data/pg_hba.conf
@@ -72,6 +73,7 @@ and add
 ```
 host all all 12.3.4.56/00 md5
 ```
+and also this file:
 ```
 vi /var/lib/pgsql/data/postgresql.conf
 ```
