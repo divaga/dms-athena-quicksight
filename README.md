@@ -71,7 +71,7 @@ Edit this file:
 sudo su - postgres 
 vi /var/lib/pgsql/data/pg_hba.conf
 ```
-and add
+and allow your DMS IP address
 ```
 host all all 12.3.4.56/00 md5
 ```
