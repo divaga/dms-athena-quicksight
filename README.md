@@ -31,6 +31,7 @@ Create EC2, use t3.small and use our VPC
 
 Install postgreSQL
 ```
+sudo yum update
 sudo amazon-linux-extras enable postgresql11
 sudo yum install postgresql postgresql-devel postgresql-server
 sudo postgresql-setup initdb
