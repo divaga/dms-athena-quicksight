@@ -42,7 +42,6 @@ sudo yum install git
 
 Configure user
 ```
-sudo su - postgres 
 psql -c "alter user postgres with password 'yourstrongpassword'"
 psql -c "create database posindo"
 psql -c "ALTER USER postgres WITH SUPERUSER"
@@ -50,7 +49,6 @@ psql -c "ALTER USER postgres WITH SUPERUSER"
 
 Install sample data
 ```
-sudo su - postgres 
 git clone https://github.com/devrimgunduz/pagila.git
 cd pagila 
 psql posindo -f pagila-schema.sql
