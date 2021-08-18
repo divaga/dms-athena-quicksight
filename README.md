@@ -60,6 +60,7 @@ psql posindo -f pagila-data.sql
 ### Configure DMS
 
 Create dms subnet group 
+
 Create dms replication instance - note down internal ip addresss
 
 
