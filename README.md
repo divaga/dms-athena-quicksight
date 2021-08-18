@@ -43,7 +43,7 @@ sudo yum install git
 Configure user
 ```
 sudo su - postgres 
-psql -c "alter user postgres with password 'Welcome#1'"
+psql -c "alter user postgres with password 'yourstrongpassword'"
 psql -c "create database posindo"
 psql -c "ALTER USER postgres WITH SUPERUSER"
 ```
