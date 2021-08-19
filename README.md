@@ -123,6 +123,7 @@ addColumnName = true
 DatePartitionEnabled = true
 DatePartitionSequence = YYYYMMDD
 DatePartitionDelimiter = DASH
+dataFormat = parquet
 ```
 
 Create replication task with initial load only and only for "public" schema
