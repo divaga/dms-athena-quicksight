@@ -72,7 +72,11 @@ vi /var/lib/pgsql/data/pg_hba.conf
 ```
 and allow your DMS IP address
 ```
+# Replication Instance
 host all all 12.3.4.56/00 md5
+# Allow replication connections from localhost, by a user with the
+# replication privilege.
+host replication postgres 12.3.4.56/00 md5
 ```
 and also this file:
 ```
@@ -81,7 +85,12 @@ vi /var/lib/pgsql/data/postgresql.conf
 
 change:
 ```
-listen_address = '*'
+listen_addresses = '*'
+
+wal_level = logical
+max_replication_slots = 10
+max_wal_senders = 10
+wal_sender_timeout = 0
 ```
 
 Restart
