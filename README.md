@@ -33,7 +33,7 @@ Install postgreSQL
 ```
 sudo yum update
 sudo amazon-linux-extras enable postgresql11
-sudo yum install postgresql postgresql-devel postgresql-server
+sudo yum install postgresql postgresql-devel postgresql-server postgresql-contrib
 sudo postgresql-setup initdb
 sudo systemctl enable --now postgresql 
 systemctl status postgresql
