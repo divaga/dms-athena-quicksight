@@ -101,6 +101,20 @@ Restart
 sudo systemctl restart postgresql
 ```
 
+### Configure Replication
+
+Execute this following SQL Statement on source database:
+
+```
+SELECT * FROM pg_create_logical_replication_slot('my_replication_slot', 'test_decoding'); 
+```
+
+validate by executing this:
+```
+select * from pg_replication_slots
+```
+
+
 ### Create DMS Endpoint
 
 Create endpoint for source and target. For Athena as target use following additional setting:
