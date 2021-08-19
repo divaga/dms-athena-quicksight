@@ -91,6 +91,9 @@ wal_level = logical
 max_replication_slots = 10
 max_wal_senders = 10
 wal_sender_timeout = 0
+
+
+shared_preload_libraries= 'test_decoding'
 ```
 
 Restart
