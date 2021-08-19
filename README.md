@@ -1,6 +1,6 @@
-# DMS - Athena/Redshift - QuickSight Workshop
+# DMS - Athena - QuickSight Workshop
 
-Migrate EC2 based postgresql to athena and visualize it thru QuickSight. Use for initial load only, not configured for CDC.
+Migrate EC2 based postgresql to athena and visualize it in near-realtime thru QuickSight. Use for initial load only and CDC.
 
 ### Create VPC, IAM Role and Security Group
 
@@ -8,17 +8,11 @@ Create Elastic IP
 
 Create VPC with 2 private subnet
 
-Create security group for ec2 (allow access from VPC subnet with standard postgresql port: 5432) and security group for Redshift
+Create security group for ec2 (allow access from VPC subnet with standard postgresql port: 5432) 
 
 Create DMS IAM role 'dms-access-for-endpoint' with 'AmazonDMSRedshiftS3Role' policy
 
 Create Glue role - AWSGlueServiceRole and S3 Access Policy
-
-### If you want to use Redshift follow this
-
-Create redshift subnet group 
-
-Create redshift cluster (dc2), attach default service role, use our VPC (Welcome#1)
 
 ### If you want to use Athena follow this
 Create bucket with "dms-" prefix
@@ -126,11 +120,11 @@ DatePartitionDelimiter = DASH
 dataFormat = parquet
 ```
 
-Create replication task with initial load only and only for "public" schema
+Create replication task with initial load and replicate on going changes, and only for "public" schema
 
 ### Create Glue Crawler
 
-Create and run glue crawler with correct S3 level
+Create and run glue crawler with correct S3 folder level
 
 ### Configure Athena
 Configure Athena S3 setting
@@ -153,4 +147,6 @@ Gave S3 access
 
 Enable QuickSight access to Athena and S3
 
-Add Athena as data source
+Add Athena as data source and disable SPICE
+
+Create visualization
