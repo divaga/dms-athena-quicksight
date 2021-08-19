@@ -100,7 +100,13 @@ sudo systemctl restart postgresql
 
 ### Create DMS Endpoint
 
-Create endpoint for source and target (for Athena as target use "addColumnName" = true)
+Create endpoint for source and target. For Athena as target use following additional setting:
+```
+addColumnName = true
+DatePartitionEnabled = true
+DatePartitionSequence = YYYYMMDD
+DatePartitionDelimiter = DASH
+```
 
 Create replication task with initial load only and only for "public" schema
 
