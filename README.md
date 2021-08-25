@@ -85,8 +85,8 @@ unzip this sakila-db.zip and change directory to sakila-db
 Prepare user
 ```
 mysql -uroot -p
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'Welcome#1';
-CREATE USER 'dms'@'%' IDENTIFIED WITH mysql_native_password BY 'Welcome#1';
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'yourstrongpassword';
+CREATE USER 'dms'@'%' IDENTIFIED WITH mysql_native_password BY 'yourstrongpassword';
 GRANT ALL PRIVILEGES ON *.* TO 'dms'@'%' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 ```
